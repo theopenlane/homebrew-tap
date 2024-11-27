@@ -5,21 +5,21 @@
 class Openlane < Formula
   desc "openlane is the client CLI for interacting with the openlane server"
   homepage "https://github.com/theopenlane/core"
-  version "0.4.3"
+  version "0.4.4"
   license "Apache-2.0"
 
   on_macos do
     on_intel do
-      url "https://github.com/theopenlane/core/releases/download/v0.4.3/openlane_0.4.3_darwin_amd64.tar.gz"
-      sha256 "525154d15cf955f1aa6416306a36af41862678d5ef1943aac2a996dafac914ac"
+      url "https://github.com/theopenlane/core/releases/download/v0.4.4/openlane_0.4.4_darwin_amd64.tar.gz"
+      sha256 "52a74f802c76730935bde05dc034d6a83b06a0773435c813468fd9ab78e4ed39"
 
       def install
         bin.install "openlane"
       end
     end
     on_arm do
-      url "https://github.com/theopenlane/core/releases/download/v0.4.3/openlane_0.4.3_darwin_arm64.tar.gz"
-      sha256 "a90190230120d6c2d019d947b59c9b651eaa56435ebc0da791202bdf625f6711"
+      url "https://github.com/theopenlane/core/releases/download/v0.4.4/openlane_0.4.4_darwin_arm64.tar.gz"
+      sha256 "b4ff6548a4cd23063e07ec92f398a20ee3b1eb89ddbe9731b317e0a82f1520a2"
 
       def install
         bin.install "openlane"
@@ -30,8 +30,8 @@ class Openlane < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/theopenlane/core/releases/download/v0.4.3/openlane_0.4.3_linux_amd64.tar.gz"
-        sha256 "d7f15bc38a7dd0d80b7ca2863be2abe58ebea28f77ac9625b694c72010f2545c"
+        url "https://github.com/theopenlane/core/releases/download/v0.4.4/openlane_0.4.4_linux_amd64.tar.gz"
+        sha256 "a1f42e51e287a6758361c82fc5a47532fc5574b8e6106f12ad9976e29de48008"
 
         def install
           bin.install "openlane"
@@ -40,8 +40,8 @@ class Openlane < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/theopenlane/core/releases/download/v0.4.3/openlane_0.4.3_linux_arm64.tar.gz"
-        sha256 "9d16a965d7027b58dd460739909bd15e43e9b0d9eb37c7dab0282606d6deda7d"
+        url "https://github.com/theopenlane/core/releases/download/v0.4.4/openlane_0.4.4_linux_arm64.tar.gz"
+        sha256 "d7e5a0c6e347a1612e2643270cac4101571b6a4d997272ec3df4f6908d6776c5"
 
         def install
           bin.install "openlane"
