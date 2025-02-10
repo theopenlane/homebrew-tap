@@ -5,21 +5,21 @@
 class Openlane < Formula
   desc "openlane is the client CLI for interacting with the openlane server"
   homepage "https://github.com/theopenlane/core"
-  version "0.6.23"
+  version "0.6.24"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/theopenlane/core/releases/download/v0.6.23/openlane_0.6.23_darwin_amd64.tar.gz"
-      sha256 "37677f880c9a50bbbf4549e3165b804b3912f55324f27454ce7d126ff5a338af"
+      url "https://github.com/theopenlane/core/releases/download/v0.6.24/openlane_0.6.24_darwin_amd64.tar.gz"
+      sha256 "0504749a60ae01a1e405312e9928a1cdb5e676e6e3722741db0a361e003d431d"
 
       def install
         bin.install "openlane"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/theopenlane/core/releases/download/v0.6.23/openlane_0.6.23_darwin_arm64.tar.gz"
-      sha256 "efcdc2121169e732214d343380de2252a7d79e4b0f64de7a5796c6c84510e67e"
+      url "https://github.com/theopenlane/core/releases/download/v0.6.24/openlane_0.6.24_darwin_arm64.tar.gz"
+      sha256 "206e5a28c9326d10706ae113cc861dc0c40328cd0e81b4245a519a130cd4028a"
 
       def install
         bin.install "openlane"
@@ -30,8 +30,8 @@ class Openlane < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/theopenlane/core/releases/download/v0.6.23/openlane_0.6.23_linux_amd64.tar.gz"
-        sha256 "55e92b40950b492f489cc1d8676645e097b36ede3278bbe86e3b36e3b2fa096a"
+        url "https://github.com/theopenlane/core/releases/download/v0.6.24/openlane_0.6.24_linux_amd64.tar.gz"
+        sha256 "e4b0917b31123560f44727d7f23e6c03c48b902d834f7e49464df6ba1de549ce"
 
         def install
           bin.install "openlane"
@@ -40,8 +40,8 @@ class Openlane < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/theopenlane/core/releases/download/v0.6.23/openlane_0.6.23_linux_arm64.tar.gz"
-        sha256 "97cf7711d5adacac192eb5786c1b3b3de16d00f6ffd433624adb1422178f6c9a"
+        url "https://github.com/theopenlane/core/releases/download/v0.6.24/openlane_0.6.24_linux_arm64.tar.gz"
+        sha256 "ed1d494f468fc68d75c97c623c0577dd204d86277f3c9a64bb1af166958be871"
 
         def install
           bin.install "openlane"
