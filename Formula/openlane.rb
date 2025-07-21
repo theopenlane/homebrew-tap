@@ -10,8 +10,8 @@ class Openlane < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/theopenlane/core/archive/refs/tags/v0.23.8.tar.gz"
-      sha256 "aee77197e0afa75dbeefd3b3d78b8ff1b5a7152ca598e715ffbc2a4ac02f221c"
+      url "https://github.com/theopenlane/core/archive/refs/tags/v0.23.9.tar.gz"
+      sha256 "dfa1581b0d14d948559a6f91f6ad4b450ad0855eda301e31c222486c51727d72"
 
       def install
         bin.install "openlane"
