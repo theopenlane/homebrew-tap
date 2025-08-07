@@ -1,6 +1,29 @@
 {
-  "commitMessageTopic": "Homebrew Formula {{depName}}",
-  "managerFilePatterns": [
-    "/^Formula/[^/]+[.]rb$/"
+  "extends": [
+    "config:base"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "^Formula/.*\\.rb$"
+      ],
+      "matchStrings": [
+        "url \".*?/v(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
+      ],
+      "depNameTemplate": "openlane",
+      "datasourceTemplate": "github-releases",
+      "lookupNameTemplate": "theopenlane/core"
+    },
+    {
+      "fileMatch": [
+        "^Formula/.*\\.rb$"
+      ],
+      "matchStrings": [
+        "sha256 \"(?<currentValue>[a-f0-9]{64})\""
+      ],
+      "depNameTemplate": "openlane",
+      "datasourceTemplate": "github-releases",
+      "lookupNameTemplate": "theopenlane/core"
+    }
   ]
 }
