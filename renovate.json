@@ -1,17 +1,14 @@
 {
-  "extends": [
-    "config:base"
-  ],
   "regexManagers": [
     {
       "fileMatch": [
         "^Formula/.*\\.rb$"
       ],
       "matchStrings": [
-        "url \".*?/v(?<currentValue>\\d+\\.\\d+\\.\\d+)\""
+        "url\\s+\"https://github\\.com/theopenlane/core/archive/refs/tags/v(?<currentValue>\\d+\\.\\d+\\.\\d+)\\.tar\\.gz\""
       ],
       "depNameTemplate": "openlane",
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "lookupNameTemplate": "theopenlane/core"
     },
     {
@@ -19,10 +16,10 @@
         "^Formula/.*\\.rb$"
       ],
       "matchStrings": [
-        "sha256 \"(?<currentValue>[a-f0-9]{64})\""
+        "sha256\\s+\"(?<currentValue>[a-f0-9]{64})\""
       ],
       "depNameTemplate": "openlane",
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "lookupNameTemplate": "theopenlane/core"
     }
   ]
