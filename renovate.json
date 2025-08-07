@@ -9,7 +9,8 @@
         "^Formula/openlane\\.rb$"
       ],
       "matchStrings": [
-        "url\\s+\\\"https://github.com/theopenlane/core/releases/download/v(?<version>[\\d.]+)/openlane_[\\d.]+_(?<os>[a-z]+)_(?<arch>[a-z0-9]+)\\.tar\\.gz\\\"[\\s\\S]+?sha256\\s+\\\"(?<sha256>[a-f0-9]{64})\\\""
+        "url\\s+\\\"https://github.com/theopenlane/core/releases/download/v(?<version>[\\d.]+)/openlane_[\\d.]+_(?<os>[a-z]+)_(?<arch>[a-z0-9]+)\\.tar\\.gz\\\"[\\s\\S]+?sha256\\s+\\\"(?<sha256>[a-f0-9]{64})\\\"",
+        "version\\s+\"(?<version>[\\d.]+)\""
       ],
       "datasourceTemplate": "github-release-attachments",
       "versioningTemplate": "semver",
