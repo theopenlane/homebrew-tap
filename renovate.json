@@ -6,26 +6,14 @@
     {
       "customType": "regex",
       "fileMatch": [
-        "^Formula/.*\\.rb$"
+        "^Formula/Openlane.rb$"
       ],
       "matchStrings": [
-        "url\\s+\"https://github\\.com/theopenlane/core/archive/refs/tags/v(?<currentValue>\\d+\\.\\d+\\.\\d+)\\.tar\\.gz\""
+        "url\\s+\"https://github.com/theopenlane/core/releases/download/v(?<version>[\\d.]+)/openlane_\\k<version>_.*?\\.tar\\.gz\"\\s+sha256\\s+\"(?<sha256>[a-f0-9]{64})\""
       ],
-      "depNameTemplate": "openlane",
-      "datasourceTemplate": "github-tags",
-      "packageNameTemplate": "theopenlane/core"
-    },
-    {
-      "customType": "regex",
-      "fileMatch": [
-        "^Formula/.*\\.rb$"
-      ],
-      "matchStrings": [
-        "sha256\\s+\"(?<currentValue>[a-f0-9]{64})\""
-      ],
-      "depNameTemplate": "openlane",
-      "datasourceTemplate": "github-tags",
-      "packageNameTemplate": "theopenlane/core"
+      "datasourceTemplate": "github-releases",
+      "versioningTemplate": "semver",
+      "depNameTemplate": "theopenlane/core"
     }
   ]
 }
