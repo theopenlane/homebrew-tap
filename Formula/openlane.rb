@@ -10,7 +10,7 @@ class Openlane < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/theopenlane/core/releases/download/v0.26.10/openlane_0.26.10_darwin_amd64.tar.gz"
+      url "https://github.com/theopenlane/core/releases/download/v0.22.5/openlane_0.22.5_darwin_amd64.tar.gz"
       sha256 "722107d90618392cab79c697aaa5213a511af743345d41770d076180cc3b8327"
 
       def install
@@ -18,7 +18,7 @@ class Openlane < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/theopenlane/core/releases/download/v0.26.10/openlane_0.26.10_darwin_arm64.tar.gz"
+      url "https://github.com/theopenlane/core/releases/download/v0.22.5/openlane_0.22.5_darwin_arm64.tar.gz"
       sha256 "98504a2e01db97940df9b82ff991d1db39d96d21134f062780d020d463bbac3b"
 
       def install
@@ -29,14 +29,14 @@ class Openlane < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/theopenlane/core/releases/download/v0.26.10/openlane_0.26.10_linux_amd64.tar.gz"
+      url "https://github.com/theopenlane/core/releases/download/v0.22.5/openlane_0.22.5_linux_amd64.tar.gz"
       sha256 "b4f912badea55bf74791c3515e135d28ff07b92682a48a9b16e34a314720fe5c"
       def install
         bin.install "openlane"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/theopenlane/core/releases/download/v0.26.10/openlane_0.26.10_linux_arm64.tar.gz"
+      url "https://github.com/theopenlane/core/releases/download/v0.22.5/openlane_0.22.5_linux_arm64.tar.gz"
       sha256 "51cdfa64495b2c753dcfe3edbd47b84a2e55712603574e6f7ad2331ddef99cd5"
       def install
         bin.install "openlane"
