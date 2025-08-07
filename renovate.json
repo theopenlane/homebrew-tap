@@ -14,7 +14,8 @@
       "datasourceTemplate": "github-release-attachments",
       "versioningTemplate": "semver",
       "depNameTemplate": "openlane_{{ os }}_{{ arch }}.tar.gz",
-      "currentValueTemplate": "{{ version }}"
+      "currentValueTemplate": "{{ version }}",
+      "packageNameTemplate": "theopenlane/core"
     }
   ],
   "packageRules": [
