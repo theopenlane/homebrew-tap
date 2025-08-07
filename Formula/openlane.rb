@@ -5,7 +5,7 @@
 class Openlane < Formula
   desc "openlane is the client CLI for interacting with the openlane server"
   homepage "https://github.com/theopenlane/core"
-  version "0.26.10"
+  version "0.22.5"
   license "Apache-2.0"
 
   on_macos do
