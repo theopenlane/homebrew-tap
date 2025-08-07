@@ -1,0 +1,19 @@
+{
+  "enabledManagers": [
+    "custom.regex"
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^Formula/Openlane.rb$"
+      ],
+      "matchStrings": [
+        "url\\s+\"https://github.com/theopenlane/core/releases/download/v(?<version>[\\d.]+)/openlane_(?<currentValue>[\\d.]+)_(?<os>[a-z]+)_(?<arch>[a-z0-9]+)\\.tar\\.gz\"\\s+sha256\\s+\"(?<sha256>[a-f0-9]{64})\""
+      ],
+      "datasourceTemplate": "github-release-attachments",
+      "versioningTemplate": "semver",
+      "depNameTemplate": "theopenlane/core-{{ os }}-{{ arch }}"
+    }
+  ]
+}
