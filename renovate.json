@@ -1,6 +1,10 @@
 {
-  "regexManagers": [
+  "extends": [
+    "config:recommended"
+  ],
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": [
         "^Formula/.*\\.rb$"
       ],
@@ -9,9 +13,10 @@
       ],
       "depNameTemplate": "openlane",
       "datasourceTemplate": "github-tags",
-      "lookupNameTemplate": "theopenlane/core"
+      "packageNameTemplate": "theopenlane/core"
     },
     {
+      "customType": "regex",
       "fileMatch": [
         "^Formula/.*\\.rb$"
       ],
@@ -20,7 +25,7 @@
       ],
       "depNameTemplate": "openlane",
       "datasourceTemplate": "github-tags",
-      "lookupNameTemplate": "theopenlane/core"
+      "packageNameTemplate": "theopenlane/core"
     }
   ]
 }
