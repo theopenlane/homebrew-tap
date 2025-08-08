@@ -15,7 +15,6 @@
       "versioningTemplate": "semver",
       "depNameTemplate": "openlane_{{ os }}_{{ arch }}.tar.gz",
       "currentValueTemplate": "{{ version }}",
-      "replaceStringTemplate": "url \"https://github.com/theopenlane/core/releases/download/v{{ currentValue }}/{{ depName }}\"\n      sha256 \"{{ newValue }}\"",
       "packageNameTemplate": "theopenlane/core"
     }
   ],
