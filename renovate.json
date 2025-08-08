@@ -9,7 +9,7 @@
         "^Formula/openlane\\.rb$"
       ],
       "matchStrings": [
-        "url\\s+\"https://github.com/theopenlane/core/releases/download/v(?<version>[\\d.]+)/openlane_(?<version2>[\\d.]+)_(?<os>[a-z]+)_(?<arch>[a-z0-9]+)\\.tar\\.gz\"\\s+sha256\\s+\"(?<sha256>[a-f0-9]{64})\""
+        "url\\s+\"(?<url>https://github.com/theopenlane/core/releases/download/v(?<version>[\\d.]+)/openlane_[\\d.]+_(?<os>[a-z]+)_(?<arch>[a-z0-9]+)\\.tar\\.gz)\"\\s+sha256\\s+\"(?<sha256>[a-f0-9]{64})\""
       ],
       "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver",
@@ -25,7 +25,7 @@
       "matchStrings": [
         "version\\s+\"(?<version>[\\d.]+)\""
       ],
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "versioningTemplate": "semver",
       "depNameTemplate": "openlane_version",
       "currentValueTemplate": "{{ version }}",
@@ -35,7 +35,8 @@
   "packageRules": [
     {
       "matchDatasources": [
-        "github-release-attachments"
+        "github-releases",
+        "github-tags"
       ],
       "groupName": "Openlane CLI release assets"
     }
