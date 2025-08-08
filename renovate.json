@@ -9,11 +9,11 @@
         "^Formula/openlane\\.rb$"
       ],
       "matchStrings": [
-        "url\\s+\"(?<url>https://github.com/theopenlane/core/releases/download/v(?<version>[\\d.]+)/openlane_[\\d.]+_(?<os>[a-z]+)_(?<arch>[a-z0-9]+)\\.tar\\.gz)\"\\s+sha256\\s+\"(?<sha256>[a-f0-9]{64})\""
+        "version\\s+\"(?<version>[\\d.]+)\""
       ],
-      "datasourceTemplate": "github-releases",
+      "datasourceTemplate": "github-tags",
       "versioningTemplate": "semver",
-      "depNameTemplate": "openlane_{{ os }}_{{ arch }}.tar.gz",
+      "depNameTemplate": "openlane_version",
       "currentValueTemplate": "{{ version }}",
       "packageNameTemplate": "theopenlane/core"
     },
@@ -23,20 +23,20 @@
         "^Formula/openlane\\.rb$"
       ],
       "matchStrings": [
-        "version\\s+\"(?<version>[\\d.]+)\""
+        "url\\s+\"(?<url>https://github.com/theopenlane/core/releases/download/v[\\d.]+/openlane_[\\d.]+_[a-z]+_[a-z0-9]+\\.tar\\.gz)\"\\s+sha256\\s+\"(?<sha256>[a-f0-9]{64})\""
       ],
-      "datasourceTemplate": "github-tags",
+      "datasourceTemplate": "github-releases",
       "versioningTemplate": "semver",
-      "depNameTemplate": "openlane_version",
-      "currentValueTemplate": "{{ version }}",
+      "depNameTemplate": "{{ url }}",
+      "currentValueTemplate": "{{ sha256 }}",
       "packageNameTemplate": "theopenlane/core"
     }
   ],
   "packageRules": [
     {
       "matchDatasources": [
-        "github-releases",
-        "github-tags"
+        "github-tags",
+        "github-releases"
       ],
       "groupName": "Openlane CLI release assets"
     }
