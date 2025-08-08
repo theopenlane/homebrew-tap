@@ -18,7 +18,7 @@ class Openlane < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/theopenlane/core/releases/download/v0.22.5/openlane_0.22.5_darwin_arm64.tar.gz"
+      url "https://github.com/theopenlane/core/releases/download/v0.26.10/openlane_0.26.10_darwin_arm64.tar.gz"
       sha256 "98504a2e01db97940df9b82ff991d1db39d96d21134f062780d020d463bbac3b"
 
       def install
