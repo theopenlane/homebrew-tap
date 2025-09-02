@@ -2,7 +2,7 @@
 cask "openlane" do
   desc "openlane is the client CLI for interacting with the openlane server"
   homepage "https://github.com/theopenlane/core"
-  version "0.30.7"
+  version "0.30.8"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,23 @@ cask "openlane" do
 
   on_macos do
     on_intel do
-      url "https://github.com/theopenlane/core/releases/download/v0.30.7/openlane_0.30.7_darwin_amd64.tar.gz"
-      sha256 "dbd1b1d829249c19a68e663ddb1b5ecc96045c39a2ae7cd138dbb1bfe86bdec1"
+      url "https://github.com/theopenlane/core/releases/download/v0.30.8/openlane_0.30.8_darwin_amd64.tar.gz"
+      sha256 "6d06d3f8dcdd1f9c9614028c6a87d3ada61872f50cb0439e293b4864fe34a526"
     end
     on_arm do
-      url "https://github.com/theopenlane/core/releases/download/v0.30.7/openlane_0.30.7_darwin_arm64.tar.gz"
-      sha256 "d1f19958c449bdd244d2df4b90157c29f62ba1c5cb2822e7a538a904326fb668"
+      url "https://github.com/theopenlane/core/releases/download/v0.30.8/openlane_0.30.8_darwin_arm64.tar.gz"
+      sha256 "38749129f0861507f83511f8d6dcd9c4f0498e7a0cb0a4a6d0bb12eb26f492e2"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/theopenlane/core/releases/download/v0.30.7/openlane_0.30.7_linux_amd64.tar.gz"
-      sha256 "2d618e706b15da4546938b234da425e36c40b698338c05b06b06fb4474c994c0"
+      url "https://github.com/theopenlane/core/releases/download/v0.30.8/openlane_0.30.8_linux_amd64.tar.gz"
+      sha256 "85e1e798ea18ae3d080988ea5dd6d163eee3c6494122db891d44515bb39cc965"
     end
     on_arm do
-      url "https://github.com/theopenlane/core/releases/download/v0.30.7/openlane_0.30.7_linux_arm64.tar.gz"
-      sha256 "f772bf0c9847f80cfb3bd16ffebe149cbe34da128001135a693be1b71df23ab5"
+      url "https://github.com/theopenlane/core/releases/download/v0.30.8/openlane_0.30.8_linux_arm64.tar.gz"
+      sha256 "ad93e51aae86930e0e40b12368a69f0febcc69854757cec358664f847b29fc72"
     end
   end
 
